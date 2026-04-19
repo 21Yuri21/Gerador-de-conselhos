@@ -6,7 +6,7 @@ async function getAdvice() {
   try {
     const response = await fetch("https://api.adviceslip.com/advice");
 
-    if (!response.ok){
+    if (!response.ok) {
       throw new Error("Ocorreu um erro ao tentar buscar as informações da API");
     }
 
@@ -20,7 +20,7 @@ async function getAdvice() {
   } catch (error) {
     console.error("Erro ao tentar buscar as informações da API", error);
   }
-  
+
 }
 
 adviceUpdateButton.addEventListener("click", getAdvice);
